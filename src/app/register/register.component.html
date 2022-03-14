@@ -1,0 +1,68 @@
+<!-- As a link -->
+<nav class="navbar navbar-light bg-dark " >
+    <a class="navbar-brand  " href="#" style="color:rgb(85, 98, 237);"><b>&#169; HAFC Bank Pvt.Ltd </b></a>
+    <span class="quote text-light">Giving you freedom...</span>
+  </nav>
+
+
+
+
+  <div class="container col-md-12 mt-0">
+      <div class="d-flex justify-content-center h-100">
+          <div class="card">
+              <div class="card-header">
+                  <h3 class="text-center">Sign Up</h3>
+                  
+              </div>
+              <div class="card-body">
+                  <form [formGroup]="registerForm" (ngSubmit)="register()">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                      
+                        <!-- two binding -[(ngModel)]="uname"  -->
+                          <!-- two binding -formControlName="uname"  -->
+                        <input type="text" class="form-control" formControlName="uname" name="uname" placeholder="Username" id="reg_uname" required>
+                        
+                    </div>
+<!-- form validation -->
+<div *ngIf="(this.registerForm.get('uname')?.touched||this.registerForm.get('uname')?.dirty)&&this.registerForm.get('uname')?.errors" style="color: red;">Invalid Username</div>
+
+                      <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-user"></i></span>
+                          </div>
+                        
+                          <!-- two binding -formControlName="acno"  -->
+                          <input type="text" class="form-control" formControlName="acno" name="acno" placeholder="Account Number" id="reg_accno" required>
+                          
+                      </div>
+
+<!-- form validation -->
+<div *ngIf="(this.registerForm.get('acno')?.touched||this.registerForm.get('acno')?.dirty)&&this.registerForm.get('acno')?.errors" style="color: red;">Invalid Account Number</div>
+
+
+                      <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-key"></i></span>
+                          </div>
+                            
+                             <!-- two binding -formControlName="pswd"  -->
+                          <input type="password" class="form-control" formControlName="pswd" name="pswd" placeholder="password" id="reg_password" required>
+                      </div>
+ <!-- form validation -->
+<div *ngIf="(this.registerForm.get('pswd')?.touched||this.registerForm.get('pswd')?.dirty)&&this.registerForm.get('pswd')?.errors" style="color: red;">Invalid Password</div>
+                     
+                    
+                      <div class="form-group">
+                          <!-- Event Binding syntax: (event)="function-call()" -->
+                          <input type="submit" value="Register"  class="btn float-right login_btn " style="width:50%" >
+                      </div>
+                  </form>
+              </div>
+              <p style="color:white;align-items:baseline;">Already registered? <a routerLink="">Log In</a></p>
+          </div>
+      </div>
+  </div>
+  

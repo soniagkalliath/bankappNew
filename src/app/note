@@ -1,0 +1,121 @@
+
+
+                                    Angular - Front End Technology
+
+                              -------------------------------------------
+
+                                         Basic Commands
+                                   ----------------------------
+
+            1. To create project - ng new project-name /  ng new project-name --routing
+
+            2. Component creation - ng g c Component-name
+
+            3. To Run Angular App- ng serve / ng serve --open
+
+            4. Service creation - ng g s service-name
+
+            5. Directive creation - ng g d Directive-name
+
+                                        Basic Concepts
+                                   -------------------------
+
+          1. Components - { html,CSS,TS file- Class file} - Root Component - AppComponent
+
+          2. Module - Add 3rd party library to project- Root Module - AppModule
+
+          3. Data Binding- Communication/data sharing within Component
+
+               3.1 One Way Binding - Data sharing in one direction
+
+                    3.1.1 Component to View 
+
+                         3.1.1.1 String Interpolation / Interpolation
+                              syntax: {{expression}}
+
+                         3.1.1.2 Property Binding
+                              syntax: [Binding-target]="Binding-source"
+
+                    3.1.2 View to Component
+
+                         3.1.2.1 Event Binding - syntax: (event)="function call"
+
+                         3.1.2.2 Event Binding using $event as argument -syntax: (event)="function call($event)"
+
+                         3.1.2.3 Using Template Reference variable- syntax: #variable-name
+
+
+
+               3.2 Two Way Binding - Data sharing in both direction at same time
+                    syntax: [(ngModel)]="variable-name" 
+                    - Import FormsModule , set "name" attribute if it used inside form tag
+
+          4. Angular Routing - To set the path of a html page 
+               - add <router-outlet> tag inside the root component html page
+
+          5. Dependency Injection: data sharing between Component
+               - inside constructor, syntax: class object: dependent Instance
+
+          6. Angular Services - For redundant codes
+
+          7. Angular Forms - 
+
+               7.1 Template driven Forms
+
+               7.2 Model driven Forms- Add ReactiveFormsModule 
+
+                    7.2.1 Reactive Forms -  add validation 
+                         {form group  - FormBuilder class,array -add validation, control}
+
+          8. Angular Directives - DOM Manipulate
+
+               8.1 Component Directives
+
+               8.2 Structural Directives - To add/remove html elememts 
+
+                    8.2.1 *ngIf - syntax: *ngIf="condition"
+
+                    8.2.2 *ngFor
+
+                    8.2.3 *ngSwitch
+
+               8.3 Attribute Directives - Based on condition we can apply the style to html
+
+                    8.3.1 Predefined/Built in attribute Directives - [ngClass]="condition? 'style1':'style2'
+
+                    8.3.2 Userdefined Attribute Directives 
+
+          9. local storage
+
+               9.1 setItem - to save data 
+
+               9.2 getItem - to get data
+
+               9.3 removeItem - to remove data
+
+          10. Parent child Communication
+
+               10.1 Parent to child - Input decorator- @Input 
+
+               10.2 Child to Parent - Output decorator - @Output
+
+          11. Event Emitter - to generate userdefined events
+
+          12. Angular Pipes - to transform data to another format
+
+               syntax- expression | pipeOperator [:pipeArguments]
+
+          13. Angular Animation 
+
+          14. HttpClientModule import - to create http request
+
+          15. Oberservable - used to resolve asynchrouns event
+                    resolve state- subscribe()
+
+
+
+
+
+
+
+
